@@ -1,0 +1,91 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f5f5; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper Styling */
+.full {
+    width: 80%;
+    max-width: 900px;
+    background-color: #e6e6e6; /* Light grey background */
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side (Login Form) */
+form {
+    width: 50%;
+}
+
+/* Welcome Text */
+h1 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Label Styling */
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.input-box input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* Login Button */
+.btn {
+    width: 85%;
+    padding: 12px;
+    background-color: #ff7f2a; /* Orange button */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e66b1e;
+}
+
+/* Right Side (Logo & Spices Image) */
+.logo-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    width: 80%;  /* re size image */
+    height: auto;
+}
