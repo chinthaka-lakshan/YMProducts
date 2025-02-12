@@ -86,6 +86,6 @@ h2 {
 
 .logo-container img {
     max-width: 100%;
-    width: 80%;  /* re size image */
+    width: 100%;  /* re size image */
     height: auto;
 }
