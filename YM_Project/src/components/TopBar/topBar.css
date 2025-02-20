@@ -1,0 +1,53 @@
+.topRow{
+    width: 85vw;
+    background-color: #e0dede;
+    margin-left: 12.1%;
+    margin-top: 0px;
+    /* margin-bottom: 7.2%; */
+    padding-top: 1.6%;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.topRow h1{
+    margin-left: 3%;
+}
+.accountBar{
+    width: 150px;
+    border-radius: 40px;
+    height: 50px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(255, 255, 255);
+    margin-left: 48%;
+}
+
+.accountBar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.accountBar button{
+    margin-top: 20px;
+    margin-left: 1px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+/* .accountBar button  {
+    width: 80px;
+} */
+.accountBar button span{
+    margin-left: -20px;
+    align-self: center;
+    font-size: small;
+    margin-top: -2px;
+}
+.accountBar button   svg{
+    align-self: center;
+    margin-left: 10px;
+    margin-top: -2px;
+}

@@ -1,0 +1,77 @@
+.itemList{
+    
+    width: 85vw;
+    height: 86.2vh;
+    margin-top: .8px;
+    margin-left: 12.1%;
+    display: grid;
+    grid-template-columns: repeat(1,1);
+    background-color: rgb(217, 218, 218);
+   
+}
+
+.itemList h3{
+    color: rgb(57, 57, 57);
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.btnAddItem{
+    width: 120px;
+    height: 40px;
+    font-size: medium;
+    margin-left: 76%;
+    margin-top: -60px;
+}
+.itemCards{
+    width: 80vw;
+    height: 65vh;
+    padding: 40px 105px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    background-color: rgb(153, 126, 178);
+    overflow: scroll;
+    margin-top: -30px;
+}
+
+.itemCards .card{
+    width: 200px;
+    height: 150px;
+    background-color: antiquewhite;
+    margin-top: 30px;
+    border-radius: 18px;
+}
+.itemCards .card .detRow{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    
+    margin-left: 78px;
+}
+.itemCards .card .detRow span{
+   margin-top: -40px;
+   margin-bottom: 45px;
+   font-weight: 100;
+   font-size: small;
+    
+}
+.itemCards .card img{
+    width: 60px;
+    margin-top: -10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.itemCards .card .row h5{
+    font-size: large;
+    font-weight: 500;
+    font-style: normal;
+    align-self: center;
+    text-align: center;
+}
+
+.itemCards .card .itemWgt .symb{
+    margin-left: 180px;
+   
+}
+.itemCards .card .itemWgt{
+    margin-top: -10px;
+}
