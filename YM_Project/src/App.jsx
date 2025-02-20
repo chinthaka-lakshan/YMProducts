@@ -9,6 +9,7 @@ import ItemList from "./components/ItemList/ItemList";
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 import RepRegistration from "./pages/RepRegistration/RepRegistration";
+import RepLogin from "./pages/RepLogin/RepLogin";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/items" element={<ItemList />} />
                     <Route path="/repRegistration" element={<RepRegistration/>} />
+                    <Route path="/repLogin" element={<RepLogin/>} />
                 </Routes>
             </div>
         </Router>
