@@ -8,6 +8,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import ItemList from "./components/ItemList/ItemList";
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
+import RepRegistration from "./pages/RepRegistration/RepRegistration";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/signUp" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/items" element={<ItemList />} />
+                    <Route path="/repRegistration" element={<RepRegistration/>} />
                 </Routes>
             </div>
         </Router>
