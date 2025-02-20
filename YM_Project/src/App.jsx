@@ -1,4 +1,4 @@
-import { useState } from "react"; // React Hooks
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // React Router
 import reactLogo from "./assets/react.svg"; // Example asset
 import viteLogo from "/vite.svg"; // Example Vite asset
 import "./index.css"; // App-level styles
@@ -10,17 +10,18 @@ import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 
 function App() {
-    const [count, setCount] = useState(0); // Example state (not currently used in Login)
-
     return (
-        <div>
-            <TopBar></TopBar>
-            <SideBar></SideBar>
-            {/* <Dashboard></Dashboard> */}
-            <ItemList />
-            {/* <Login />
-       {/* Rendering the Login component */}
-        </div>
+        <Router>
+            <div>
+                {/* <TopBar /> 
+                <SideBar />  */}
+                <Routes>
+                    <Route path="/signUp" element={<Login />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/items" element={<ItemList />} />
+                </Routes>
+            </div>
+        </Router>
     );
 }
 

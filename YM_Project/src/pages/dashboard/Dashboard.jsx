@@ -7,7 +7,10 @@ import users from "../../Image/users.png";
 import TopBar from "../../components/TopBar/TopBar";
 const Dashboard = () => {
     return (
-        <>
+        <div className="dashboard">
+            <TopBar/>
+            <SideBar/>
+
             <div className="baseCont">
                 <div className="hRow">
                     <h3 class="text-4xl font-serif font-medium">
@@ -55,7 +58,7 @@ const Dashboard = () => {
                     </a>
                 </div>
             </div>
-        </>
+            </div>
     );
 };
 

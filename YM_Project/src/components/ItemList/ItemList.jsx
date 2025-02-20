@@ -14,6 +14,7 @@ const ItemList = () => {
     return (
         <>
             <SideBar />
+            <TopBar/>
 
             <div className="itemList">
                 <h3 class="text-4xl font-serif  font-medium">Item List</h3>
