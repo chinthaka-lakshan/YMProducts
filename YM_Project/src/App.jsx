@@ -18,7 +18,7 @@ function App() {
                 {/* <TopBar /> 
                 <SideBar />  */}
                 <Routes>
-                    <Route path="/signUp" element={<Login />} />
+                    <Route path="/" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/items" element={<ItemList />} />
                     <Route path="/repRegistration" element={<RepRegistration/>} />
