@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // React Router
 import reactLogo from "./assets/react.svg"; // Example asset
 import viteLogo from "/vite.svg"; // Example Vite asset
@@ -12,30 +13,29 @@ import RepRegistration from "./pages/RepRegistration/RepRegistration";
 import RepLogin from "./pages/RepLogin/RepLogin";
 
 function App() {
-<<<<<<< HEAD
-  const [count, setCount] = useState(0); // Example state (not currently used in Login)
+    const [count, setCount] = useState(0); // Example state (not currently used in Login)
 
-  return (
-    <div>
-      <div className="mainCont">
-        <div className="leftCont">
-          <SideBar></SideBar>
-        </div>
-        <div className="rightCont">
-          <TopBar></TopBar>
-          <div className="routeContent">
-            {/* <Dashboard></Dashboard> */}
-            <ItemList></ItemList>
+    return (
+        <div>
+            <div className="mainCont">
+                <div className="leftCont">
+                    <SideBar></SideBar>
+                </div>
+                <div className="rightCont">
+                    <TopBar></TopBar>
+                    <div className="routeContent">
+                        {/* <Dashboard></Dashboard> */}
+                        <ItemList></ItemList>
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
 
-      {/* <ItemList /> */}
-      {/* <Login />
+            {/* <ItemList /> */}
+            {/* <Login />
        {/* Rendering the Login component */}
-    </div>
-  );
-=======
+        </div>
+    );
+
     return (
         <Router>
             <div>
@@ -45,13 +45,15 @@ function App() {
                     <Route path="/" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/items" element={<ItemList />} />
-                    <Route path="/repRegistration" element={<RepRegistration/>} />
-                    <Route path="/repLogin" element={<RepLogin/>} />
+                    <Route
+                        path="/repRegistration"
+                        element={<RepRegistration />}
+                    />
+                    <Route path="/repLogin" element={<RepLogin />} />
                 </Routes>
             </div>
         </Router>
     );
->>>>>>> main
 }
 
 export default App;

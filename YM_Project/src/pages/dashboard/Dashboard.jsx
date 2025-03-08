@@ -7,7 +7,7 @@ import stock from "../../Image/stock.png";
 import users from "../../Image/users.png";
 import TopBar from "../../components/TopBar/TopBar";
 const Dashboard = () => {
-<<<<<<< HEAD
+
   return (
     <>
       <div className="baseCont">
@@ -57,7 +57,7 @@ const Dashboard = () => {
       </div>
     </>
   );
-=======
+
     return (
         <div className="dashboard">
             <TopBar/>
@@ -112,7 +112,7 @@ const Dashboard = () => {
             </div>
             </div>
     );
->>>>>>> main
+
 };
 
 export default Dashboard;
