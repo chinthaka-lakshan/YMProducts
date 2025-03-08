@@ -1,0 +1,105 @@
+/* Overlay Styling */
+.edit-rep-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/* Popup Box Styling */
+.edit-rep-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 40%; /*  Adjusts width */
+    height: 80vh; /*  Adjusts height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*  Centers form vertically */
+    align-items: center; /*  Centers form horizontally */
+    margin-left: 140px;
+}
+
+/* Form Styling */
+form {
+    width: 80%; /*  Ensures form width is balanced */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*  Centers content inside form */
+    align-items: center; /*  Ensures all items are centered */
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    /* text-align: left;  Centers label text */
+    margin-left: 110px;
+}
+
+/* Input Field Styling */
+input {
+    width: 80%; /* Adjusts input width to form width */
+    padding: 12px; /*  Increased input height */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left; /*  Centers text inside input fields */
+}
+
+/* Buttons Container */
+.edit-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.cancel-btn, .save-btn {
+    width: 130px; /*  Adjusted button width */
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+/* Hover Effects */
+.cancel-btn:hover {
+    background-color: #e68900;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+}
+h2 {
+    font-size: 30px; /*  Change this value for desired size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
