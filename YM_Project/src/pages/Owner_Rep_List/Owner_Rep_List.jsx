@@ -24,7 +24,7 @@ const Owner_Rep_List = () => {
       <TopBar />
       
       <div className="content">
-        <h2>All Orders</h2>
+        <h2>All Representatives</h2>
         <div className="search-box">
           <FaSearch className="search-icon" />
           <input type="text" placeholder="Search" />
