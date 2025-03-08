@@ -1,62 +1,71 @@
 .itemList{
     
-    width: 85vw;
-    height: 86.2vh;
-    margin-top: .8px;
-    margin-left: 12.1%;
-    display: grid;
-    grid-template-columns: repeat(1,1);
-    background-color: rgb(217, 218, 218);
-   
+    width: 65vw;
+    height: 65vh;
+    margin-top: -100px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(217, 218, 218); */
+    background-color: #e0dede;
 }
 
 .itemList h3{
     color: rgb(57, 57, 57);
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .btnAddItem{
     width: 120px;
     height: 40px;
     font-size: medium;
-    margin-left: 76%;
-    margin-top: -60px;
+    margin-left: 55vw;
+    margin-top: -45px;
 }
 .itemCards{
-    width: 80vw;
-    height: 65vh;
-    padding: 40px 105px;
+    width: 60vw;
+    height: 55vh;
+    /* padding: 40px 105px; */
     margin-left: 10px;
     display: grid;
     grid-template-columns: repeat(3,3fr);
-    background-color: rgb(153, 126, 178);
+  
     overflow: scroll;
-    margin-top: -30px;
+    
 }
 
 .itemCards .card{
-    width: 200px;
-    height: 150px;
+    width: 240px;
+    height: 170px;
     background-color: antiquewhite;
     margin-top: 30px;
     border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.itemCards .card .details{
+    display: grid;
+    grid-template-columns:  repeat(1,3fr);
+    margin-left: 25px;
 }
 .itemCards .card .detRow{
     display: grid;
     grid-template-columns: repeat(1,2fr);
     
-    margin-left: 78px;
+    margin-left: 7px;
 }
 .itemCards .card .detRow span{
-   margin-top: -40px;
-   margin-bottom: 45px;
+   margin-top: 20px;
+   margin-bottom: -16px;
    font-weight: 100;
    font-size: small;
+   margin-left: -10px;
     
 }
-.itemCards .card img{
+.itemCards .card .imgItem{
     width: 60px;
-    margin-top: -10px;
+    margin-top: 50px;
     border-radius: 10px;
     margin-left: 10px;
 }
@@ -69,9 +78,38 @@
 }
 
 .itemCards .card .itemWgt .symb{
-    margin-left: 180px;
+    margin-left: 80px;
+    margin-top: 15px;
    
 }
 .itemCards .card .itemWgt{
-    margin-top: -10px;
+    margin-top: 10px;
+}
+
+#small-modal{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  
+    background-color: rgba(245, 244, 243, 0.347);
+    backdrop-filter: blur(3px);
+}
+.addForm{
+    width: 34vw;
+    background-color: #FFFFFF;
+    height: 70vh;
+}
+
+.addForm h3{
+    margin-top: 30px;
+}
+
+.detRow{
+    display: flex;
+    flex-direction: column;
+}
+
+.midRow{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
