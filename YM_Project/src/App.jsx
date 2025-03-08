@@ -12,6 +12,8 @@ import RepRegistration from "./pages/RepRegistration/RepRegistration";
 import RepLogin from "./pages/RepLogin/RepLogin";
 import Rep_List from "./pages/Rep_List/Rep_List";
 
+
+
 function App() {
     return (
         <Router>
@@ -25,6 +27,7 @@ function App() {
                     <Route path="/repRegistration" element={<RepRegistration/>} />
                     <Route path="/repLogin" element={<RepLogin/>} />
                     <Route path="/replist" element={<Rep_List/>} />
+                    
                 </Routes>
             </div>
         </Router>
