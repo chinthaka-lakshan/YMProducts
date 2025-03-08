@@ -11,6 +11,7 @@ import SideBar from "./components/SideBar/SideBar";
 import RepRegistration from "./pages/RepRegistration/RepRegistration";
 import RepLogin from "./pages/RepLogin/RepLogin";
 import Rep_List from "./pages/Rep_List/Rep_List";
+import Owner_Rep_List from "./pages/Owner_Rep_List/Owner_Rep_List";
 
 
 
@@ -27,6 +28,8 @@ function App() {
                     <Route path="/repRegistration" element={<RepRegistration/>} />
                     <Route path="/repLogin" element={<RepLogin/>} />
                     <Route path="/replist" element={<Rep_List/>} />
+                    <Route path="/ownerreplist" element={<Owner_Rep_List/>} />
+                    
                     
                 </Routes>
             </div>
