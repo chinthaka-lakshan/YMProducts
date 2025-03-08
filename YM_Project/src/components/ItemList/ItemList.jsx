@@ -8,19 +8,8 @@ import { useDropzone } from "react-dropzone";
 const ItemList = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-<<<<<<< HEAD
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState(null);
-=======
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-        console.log("ko");
-    };
-    return (
-        <>
-            <SideBar />
-            <TopBar/>
->>>>>>> main
 
   const onDrop = (acceptedFiles) => {
     const file = acceptedFiles[0];
