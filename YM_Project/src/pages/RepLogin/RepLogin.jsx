@@ -1,14 +1,10 @@
 import React from "react";
-import "./login.css";
-import logo from "../../Image/ymproducts.png"; // Make sure the logo path is correct
-import SideBar from "../../components/SideBar/SideBar"; // Adjust path if needed
-import TopBar from "../../components/TopBar/TopBar"; // Adjust path if needed
+import "./RepLogin.css";
+import logo from "../../Image/rep.png";
 
 const Login = () => {
   return (
     <>
-      {/* <SideBar />
-      <TopBar /> */}
 
       <div className="full">
         <form>
@@ -29,7 +25,7 @@ const Login = () => {
         </form>
 
         <div className="logo-container">
-          <img src={logo} alt="YM Products Logo" />
+          <img src={logo} alt="Rep Image" />
         </div>
       </div>
     </>
