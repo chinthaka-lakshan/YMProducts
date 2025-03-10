@@ -1,46 +1,48 @@
 
 .baseCont{
    
-    display: grid;
-    grid-template-columns: repeat(1,3fr);
-    width: 85vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 60vh;
     background-color: #e0dede;
-    margin-left: 12.1%;
-   margin-top: 0px;
+    
+  
 }
 
 .baseCont .hRow{
-    width:85vw;
-    height: 20%;
+    display: flex;
+    width:70vw;
+    /* background-color: blueviolet; */
+    height: 10vh;
     padding: 0;
-    margin-top: 1px;
-    /* background-color: aquamarine; */
+    margin-top: -100px;
+   
    
 }
 .baseCont h3{
 
-    margin: 10px;
-    margin-left: 30px;
+    display: flex;
+    margin-left: 10px;
     
 }
 
 
 .hLine{
-    margin-top: -200px;
-    width: 85vw;
+    display: flex;
+
+    width: 82vw;
     height: 1px;
     background-color: black;
     
 }
 .middleBox{
+    
     position: relative;
     width: 60vw;
-    height: 35vh;
-    /* margin-top: -350px; */
-    margin-top: -400px;
-    margin-left: 10px;
-    margin-bottom: 0px;
+    height: 40vh;
+    margin-top: 10px; 
+    
     display: grid;
     grid-template-columns: repeat(3,3fr);
     background-color: bisque;

@@ -1,5 +1,12 @@
 import React from "react";
-import { FaTachometerAlt, FaShoppingCart, FaUsers, FaChartLine, FaStore, FaSignOutAlt } from "react-icons/fa";
+import {
+  FaTachometerAlt,
+  FaShoppingCart,
+  FaUsers,
+  FaChartLine,
+  FaStore,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import "./sidebar.css"; // Ensure CSS is implemented
 
 const Sidebar = () => {

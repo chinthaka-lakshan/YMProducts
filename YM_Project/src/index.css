@@ -4,3 +4,130 @@
 
 
 
+.mainCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+   margin-left: 0px;
+  }
+  
+  .leftCont{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(1,1fr);
+    background-color: aqua;
+    height: 100vh;
+    width: 16vw;
+    margin-left: 0px;
+
+    @apply sm:w-1/4 md:w-1/5 lg:w-1/6;
+  }
+  
+  .rightCont{
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    width: 84vw;
+    height: 100vh;
+    background-color: bisque;
+
+    @apply sm:w-3/4 md:w-4/5 lg:w-5/6; 
+  }
+
+
+
+
+
+
+  @media (max-width: 1148px){
+    .rightCont{
+        margin-left: 1px;
+    }
+    .middleBox{
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns:repeat(2,3fr)
+    }
+    .rightCont{
+       width: 80vw;
+    };
+    .topRow ,.topBar{
+        width: 70vw;
+        margin-left: 15vw;
+    }
+    .accountBar button span{
+        margin-left: 10px;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 768px) {
+    .topRow {
+      grid-template-columns: 1fr; /* Stacks columns */
+      height: 25vh;/* Adjust height for smaller screens */
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .topBar{
+        display: flex;
+        flex-direction: row;
+    }
+    .accountBar{
+       /* margin-left: 45vw;  */
+       width: 115px;
+    }
+    .accountBar button span{
+        margin-left: 6px;
+        font-size: smaller;
+    }
+    .accountBar button {
+        margin-left: 1px;
+    }
+    .accountBar img{
+        width: 25vw;
+        height: 17vh;
+        border-radius: 50%;
+    }
+    .leftCont {
+      width: 20vw; /* Increase width slightly */
+      height: calc(100vh - 8vh); /* Adjust height */
+    }
+  
+    .rightCont {
+      width: 80vw; /* Adjust width */
+      height: calc(100vh - 8vh);
+     /* Adjust height */
+    }
+    .topRow ,.topBar{
+        width: 60vw;
+        margin-left: 15vw;
+    }
+
+    .middleBox{
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns:repeat(1,6fr)
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .leftCont {
+      width: 25vw; /* Further adjustment */
+      flex-direction: column; /* Stack content vertically */
+      height: 100vh;
+    }
+  
+    .rightCont {
+      width: 70vw;
+       /* Adjust width accordingly */
+       height: 100vh;
+    }
+  
+    .topRow {
+      height: 7vh; /* Further reduce height */
+    }
+  }
