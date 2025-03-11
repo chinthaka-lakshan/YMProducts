@@ -24,32 +24,19 @@ function App() {
         <div className="rightCont">
           <TopBar></TopBar>
           <div className="routeContent">
-            <Dashboard></Dashboard>
-            {/* <ItemList></ItemList> */}
+            <Router>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/items" element={<ItemList />} />
+                <Route path="/repRegistration" element={<RepRegistration />} />
+                <Route path="/repLogin" element={<RepLogin />} />
+              </Routes>
+            </Router>
           </div>
         </div>
       </div>
-
-      {/* <ItemList /> */}
-      {/* <Login />
-       {/* Rendering the Login component */}
     </div>
-  );
-
-  return (
-    <Router>
-      <div>
-        {/* <TopBar /> 
-                <SideBar />  */}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/items" element={<ItemList />} />
-          <Route path="/repRegistration" element={<RepRegistration />} />
-          <Route path="/repLogin" element={<RepLogin />} />
-        </Routes>
-      </div>
-    </Router>
   );
 }
 
