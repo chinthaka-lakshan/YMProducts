@@ -1,5 +1,12 @@
 import React from "react";
-import { FaTachometerAlt, FaShoppingCart, FaUsers, FaChartLine, FaStore, FaSignOutAlt } from "react-icons/fa";
+import {
+  FaTachometerAlt,
+  FaShoppingCart,
+  FaUsers,
+  FaChartLine,
+  FaStore,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import "./sidebar.css"; // Ensure CSS is implemented
 
 const Sidebar = () => {
@@ -13,7 +20,11 @@ const Sidebar = () => {
         </li>
         <li>
           <FaShoppingCart className="menu-icon" />
-          <span>Order</span>
+          <span>Orders</span>
+        </li>
+        <li>
+          <FaShoppingCart className="menu-icon" />
+          <span>Returns</span>
         </li>
         <li>
           <FaUsers className="menu-icon" />
