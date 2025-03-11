@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // React Router
 import reactLogo from "./assets/react.svg"; // Example asset
 import viteLogo from "/vite.svg"; // Example Vite asset
@@ -12,7 +13,6 @@ import RepRegistration from "./pages/RepRegistration/RepRegistration";
 import RepLogin from "./pages/RepLogin/RepLogin";
 
 function App() {
-
   const [count, setCount] = useState(0); // Example state (not currently used in Login)
 
   return (
@@ -24,9 +24,9 @@ function App() {
         <div className="rightCont">
           <TopBar></TopBar>
           <div className="routeContent">
-            {/* <Dashboard></Dashboard> */}
-            <ItemList></ItemList>
-            </div>
+            <Dashboard></Dashboard>
+            {/* <ItemList></ItemList> */}
+          </div>
         </div>
       </div>
 
@@ -36,22 +36,21 @@ function App() {
     </div>
   );
 
-    return (
-        <Router>
-            <div>
-                {/* <TopBar /> 
+  return (
+    <Router>
+      <div>
+        {/* <TopBar /> 
                 <SideBar />  */}
-                <Routes>
-                    <Route path="/" element={<Login />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/items" element={<ItemList />} />
-                    <Route path="/repRegistration" element={<RepRegistration/>} />
-                    <Route path="/repLogin" element={<RepLogin/>} />
-                </Routes>
-            </div>
-        </Router>
-    );
-
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/items" element={<ItemList />} />
+          <Route path="/repRegistration" element={<RepRegistration />} />
+          <Route path="/repLogin" element={<RepLogin />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

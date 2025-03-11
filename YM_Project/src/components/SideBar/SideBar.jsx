@@ -20,7 +20,11 @@ const Sidebar = () => {
         </li>
         <li>
           <FaShoppingCart className="menu-icon" />
-          <span>Order</span>
+          <span>Orders</span>
+        </li>
+        <li>
+          <FaShoppingCart className="menu-icon" />
+          <span>Returns</span>
         </li>
         <li>
           <FaUsers className="menu-icon" />
