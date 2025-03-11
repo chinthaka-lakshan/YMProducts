@@ -23,8 +23,8 @@ const RepRegistration = () => {
 
     return (
         <div className="rep-registration">
-            <TopBar />
-            <SideBar />
+            {/* <TopBar />
+            <SideBar /> */}
             <div className="baseCont">
                 <div className="hRow">
                     <h3 className="text-4xl font-serif font-medium">Rep Registration</h3>
