@@ -4,31 +4,39 @@ import "./itemList.css";
 import itemList from "../../Image/item_list.png";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useDropzone } from "react-dropzone";
+// import { useDropzone } from "react-dropzone";
 const ItemList = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isEditFormOpen, setIsEditFormOpen] = useState(false);
-    const [selectedFile, setSelectedFile] = useState(null);
+    // const [selectedFile, setSelectedFile] = useState(null);
     const [preview, setPreview] = useState(null);
 
-    const onDrop = (acceptedFiles) => {
-        const file = acceptedFiles[0];
-        if (file) {
-            setSelectedFile(file);
-            setPreview(URL.createObjectURL(file));
-        }
-    };
+    // const onDrop = (acceptedFiles) => {
+    //     const file = acceptedFiles[0];
+    //     if (file) {
+    //         setSelectedFile(file);
+    //         setPreview(URL.createObjectURL(file));
+    //     }
+    // };
 
-    const { getRootProps, getInputProps } = useDropzone({
-        onDrop,
-        accept: "image/*",
-        multiple: false,
-    });
+    // const { getRootProps, getInputProps } = useDropzone({
+    //     onDrop,
+    //     accept: "image/*",
+    //     multiple: false,
+    // });
 
     //Edit Item
     const toggleEditForm = () => {
         setIsEditFormOpen(!isEditFormOpen);
         console.log("ko");
+    };
+
+    const editUrl = "http://127.0.0.1:8000/api/edit-items";
+    const editItem = () => {
+        toggleEditForm();
+    };
+    const deleteItem = () => {
+        toggleEditForm();
     };
 
     // Save Item
@@ -61,11 +69,11 @@ const ItemList = () => {
         );
         formData.append("weight", document.getElementById("weight").value);
 
-        formData.append("image", selectedFile);
-        if (!selectedFile) {
-            alert("please select an image!");
-            return;
-        }
+        // formData.append("image", selectedFile);
+        // if (!selectedFile) {
+        //     alert("please select an image!");
+        //     return;
+        // }
 
         try {
             const response = await axios.post(url, formData, {
@@ -73,12 +81,12 @@ const ItemList = () => {
                     "Content-Type": "multipart/form-data",
                 },
             });
-            console.log(response.data.message);
+            //console.log(response.data.message);
             console.log("File" + selectedFile);
             if (response && response.data) {
                 alert("Item added Successfully!");
-                selectedFile(null);
-                setPreview(null);
+                // selectedFile(null);
+                // setPreview(null);
             }
         } catch (error) {
             console.error(error);
@@ -123,16 +131,16 @@ const ItemList = () => {
                             <div
                                 className="card"
                                 key={item.id}
-                                type="button"
+                                onClick={toggleEditForm}
                                 data-modal-target="editItem-form"
                                 data-modal-toggle="editItem-form"
                             >
-                                <div className="imgItem">
+                                {/* <div className="imgItem">
                                     <img
                                         src={`http://127.0.0.1:8000/storage/${item.image}`}
                                         alt={item.name}
                                     />
-                                </div>
+                                </div> */}
 
                                 <div className="row details">
                                     <h5>{item.name}</h5>
@@ -184,7 +192,7 @@ const ItemList = () => {
                             </button>
 
                             <div className="detRow">
-                                <div
+                                {/* <div
                                     {...getRootProps({
                                         className:
                                             "dropzone bg-gray-50 border border-dashed border-gray-400 text-gray-500 p-6 rounded-lg cursor-pointer",
@@ -203,7 +211,7 @@ const ItemList = () => {
                                             to select one
                                         </p>
                                     )}
-                                </div>
+                                </div> */}
                                 <div className="mb-5">
                                     <label
                                         for="name"
@@ -222,7 +230,7 @@ const ItemList = () => {
                                 <div className="midRow">
                                     <div className="mb-5">
                                         <label
-                                            for="email"
+                                            for="quantity"
                                             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                         >
                                             Quantity
@@ -253,7 +261,7 @@ const ItemList = () => {
                                 </div>
                                 <div class="mb-5">
                                     <label
-                                        for="password"
+                                        for="price"
                                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                     >
                                         Price (Rs.)
@@ -404,7 +412,7 @@ const ItemList = () => {
                                     Save
                                 </button>
                                 <button
-                                    onClick={toggleEditForm}
+                                    onClick={deleteItem}
                                     type="button"
                                     className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                                 >
