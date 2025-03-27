@@ -13,13 +13,13 @@ class ItemController extends Controller
             'quantity' => 'required|integer',
             'price'=> 'required|numeric',
             'weight' => 'required|string',
-            'image'=> 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
+            // 'image'=> 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
-        if($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('itemsImage','images');
-            $validatedData['image'] = $imagePath;
-        }
+        // if($request->hasFile('image')) {
+        //     $imagePath = $request->file('image')->store('itemsImage','images');
+        //     $validatedData['image'] = $imagePath;
+        // }
         Item::create($validatedData);
         return response()->json(['message' =>'Item added successfully']);
     }

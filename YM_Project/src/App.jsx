@@ -1,64 +1,49 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // React Router
-import reactLogo from "./assets/react.svg"; // Example asset
-import viteLogo from "/vite.svg"; // Example Vite asset
-import "./index.css"; // App-level styles
-import "./App";
-import Login from "./pages/Login/login"; // Ensure this path is correct and matches the file name/extension
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+import "./index.css";
+import Login from "./pages/Login/login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ItemList from "./components/ItemList/ItemList";
 import TopBar from "./components/TopBar/TopBar";
 import SideBar from "./components/SideBar/SideBar";
 import RepRegistration from "./pages/RepRegistration/RepRegistration";
 import RepLogin from "./pages/RepLogin/RepLogin";
-import Rep_List from "./pages/Rep_List/Rep_List";
-
-
 
 function App() {
-  const [count, setCount] = useState(0); // Example state (not currently used in Login)
+  const [count, setCount] = useState(0); 
 
   return (
-    <div>
-      <div className="mainCont">
-        <div className="leftCont">
-          <SideBar></SideBar>
-        </div>
-        <div className="rightCont">
-          <TopBar></TopBar>
-          <div className="routeContent">
-            <Router>
-              <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/items" element={<ItemList />} />
-                <Route path="/repRegistration" element={<RepRegistration />} />
-                <Route path="/repLogin" element={<RepLogin />} />
-              </Routes>
-            </Router>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    <Router>
+      <Routes>
+        {/* Login page should be separate and shouldn't have Sidebar & TopBar */}
+        <Route path="/" element={<Login />} />
+        <Route path="/repLogin" element={<RepLogin />} />
 
-    return (
-        <Router>
-            <div>
-                {/* <TopBar /> 
-                <SideBar />  */}
-                <Routes>
-                    <Route path="/" element={<Login />} />
+        {/* Protected Routes (Sidebar & TopBar should always be visible) */}
+        <Route 
+          path="/*" 
+          element={
+            <div className="mainCont">
+              <div className="leftCont">
+                <SideBar />
+              </div>
+              <div className="rightCont">
+                <TopBar />
+                <div className="routeContent">
+                  <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/items" element={<ItemList />} />
-                    <Route path="/repRegistration" element={<RepRegistration/>} />
-                    <Route path="/repLogin" element={<RepLogin/>} />
-                    <Route path="/replist" element={<Rep_List/>} />
+                    <Route path="/repRegistration" element={<RepRegistration />} />
                     
-                </Routes>
+                  </Routes>
+                </div>
+              </div>
             </div>
-        </Router>
-    );
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
